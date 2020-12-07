@@ -64,7 +64,7 @@ public class Heap {
         int k = n;
         while (k > 1) {
             exch(pq, 1, k--);
-            sink(pq, 1, k);
+            sink(pq, 1, k); //从顶点开始下沉. K 为最后一位
         }
     }
 
@@ -72,14 +72,30 @@ public class Heap {
      * Helper functions to restore the heap invariant.
      ***************************************************************************/
 
+    /**
+     * 自顶向下下沉
+     * @param pq
+     * @param k
+     * @param n
+     */
     private static void sink(Comparable[] pq, int k, int n) {
         while (2 * k <= n) {
-            int j = 2 * k;
-            if (j < n && less(pq, j, j + 1)) j++;
-            if (!less(pq, k, j)) break;
-            exch(pq, k, j);
-            k = j;
+            int j = 2 * k;//K的叶子节点
+            if (j < n && less(pq, j, j + 1)) j++; //找到最大的叶子节点
+            if (!less(pq, k, j)) break; //如果k节点是最大的跳出循环
+            exch(pq, k, j); //否则交换K节点和三者中的叶子节点.
+            k = j; // 继续从叶子节点处下沉.
         }
+    }
+
+    /**
+     * 自底向上上浮.
+     * @param qp
+     * @param k
+     * @param n
+     */
+    private static void swim(Comparable[] qp, int k, int n) {
+
     }
 
     /***************************************************************************
