@@ -29,8 +29,8 @@ public class WeightedQuickUnionByHeight extends AbstractUF {
         } else if (height[i] > height[j]) {
             id[j] = i;
         } else {
-            id[i] = j;
-            height[i]++;
+            id[i] = j; // i的根节点变为j 节点j的高度增加1
+            height[j]++;
         }
         count--;
     }

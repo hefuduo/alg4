@@ -23,10 +23,10 @@ public class WeightedQuickUnion extends AbstractUF {
             return;
         if (sz[i] < sz[j]) {
             id[i] = j;
-            sz[i] += sz[j];
+            sz[j] += sz[i];
         } else {
             id[j] = i;
-            sz[j] += sz[i];
+            sz[i] += sz[j];
         }
     }
 
