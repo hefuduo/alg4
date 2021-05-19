@@ -22,6 +22,8 @@ class UFQuickFind : UFAbstract {
     constructor(id: IntArray) : super(id)
 
     override fun union(p: Int, q: Int) {
+        validate(p)
+        validate(q)
         val pId = find(p)
         val qId = find(q)
         if (pId == qId)
@@ -35,6 +37,7 @@ class UFQuickFind : UFAbstract {
     }
 
     override fun find(p: Int): Int {
+        validate(p)
         return id[p]
     }
 }

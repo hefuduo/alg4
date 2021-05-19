@@ -21,6 +21,14 @@ abstract class UFAbstract(n: Int) : UF {
         this.id = id
     }
 
+
+    fun validate(x: Int): Unit {
+        val n = id.size
+        if (x < 0 || x > n) {
+            throw Exception("index $n is out of array index")
+        }
+    }
+
     override fun connected(p: Int, q: Int): Boolean {
         return find(p) == find(q)
     }
