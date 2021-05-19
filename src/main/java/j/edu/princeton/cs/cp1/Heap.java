@@ -21,7 +21,7 @@
  *
  ******************************************************************************/
 
-package edu.princeton.cs.cp2;
+package j.edu.princeton.cs.cp1;
 
 /**
  * The {@code Heap} class provides a static method to sort an array

@@ -1,4 +1,4 @@
-package edu.princeton.cs.cp2.uf;
+package j.edu.princeton.cs.cp1.uf;
 
 /**
  * edu.princeton.cs.cp2
