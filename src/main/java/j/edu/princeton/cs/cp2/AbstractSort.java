@@ -25,6 +25,12 @@ public abstract class AbstractSort {
         return true;
     }
 
+    public void exch(int a, int b) {
+        Comparable temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
+
     public void show() {
         String s = Arrays.toString(array);
         System.out.println(s);
