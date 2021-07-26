@@ -1,4 +1,4 @@
-package j.edu.princeton.cs.cp2;
+package j.edu.princeton.cs.cp2.tools;
 
 /******************************************************************************
  *  洗牌
@@ -82,6 +82,22 @@ public class Knuth {
         for (int i = 0; i < n; i++) {
             // choose index uniformly in [0, i]
             int r = (int) (Math.random() * (i + 1));
+            Object swap = a[r];
+            a[r] = a[i];
+            a[i] = swap;
+        }
+    }
+
+    /**
+     *
+     * @param a array
+     * @param start start index included
+     * @param end end index excluded
+     */
+    public static void shuffle(Object[] a, int start, int end) {
+        for (int i = start; i < end; i++) {
+            // choose index uniformly in [0, i]
+            int r = (int) (Math.random() * (i + 1)) + 1;
             Object swap = a[r];
             a[r] = a[i];
             a[i] = swap;

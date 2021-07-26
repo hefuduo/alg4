@@ -1,6 +1,7 @@
 package j.edu.princeton.cs.cp2;
 
-import j.edu.princeton.cs.cp2.elementsort.SelectionSort;
+import j.edu.princeton.cs.cp2.arraylist.elementsort.SelectionSort;
+import j.edu.princeton.cs.cp2.tools.Knuth;
 
 import java.util.Arrays;
 

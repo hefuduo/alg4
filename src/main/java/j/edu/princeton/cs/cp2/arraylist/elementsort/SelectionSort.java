@@ -1,9 +1,9 @@
-package j.edu.princeton.cs.cp2.elementsort;
+package j.edu.princeton.cs.cp2.arraylist.elementsort;
 
-import j.edu.princeton.cs.cp2.AbstractSort;
+import j.edu.princeton.cs.cp2.arraylist.AbstractSort;
 
 /**
- * j.edu.princeton.cs.cp2.elementsort
+ * j.edu.princeton.cs.cp2.arraylist.elementsort
  * Created by hefuduo on 5/21/21.
  */
 public class SelectionSort extends AbstractSort {
